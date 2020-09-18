@@ -4,6 +4,7 @@ import os
 
 def runCommand(command, simple=False, returncode=False):
 
+
     if not type(command) == str:
         print("ERROR: run command passed non string type")
         return
@@ -22,3 +23,20 @@ def runCommand(command, simple=False, returncode=False):
         return (stdout, rc)
     else:
         return stdout
+
+
+def makeUserAdmin(user):
+    _, s = runCommand("sudo adduser " + user + " sudo", returncode=True)
+    if s == 1:
+        print("ERROR: Was unable to promote " + user + " to admin")
+    else:
+        print(user + " promoted to admin")
+
+def demoteUser(user):
+    _, s = runCommand("sudo deluser " + user + " sudo", returncode=True)
+
+    if s == 1:
+        print("ERROR: Was unable to demote " + user)
+    else:
+        print(user + " was demoted to standard user")
+
