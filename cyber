@@ -1,15 +1,29 @@
 #!/bin/python3
 
+
 # Global Imports
 import os
 import sys
 
-# Collect and sort arguments
 
+# Command imports
+from Cyber_Commands import listusers
+
+
+# Global Variables
+commands = {
+    "--listusers" : listusers.listusers
+}
+
+
+# Collect and sort arguments
 args = sys.argv
 command = args[1]
 
 args.remove(args[0])
 args.remove(command)
 
-print(args)
+for key in commands:
+    if command == key:
+        commands[key](args)
+        break
