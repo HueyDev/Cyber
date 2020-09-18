@@ -1,12 +1,12 @@
 from . import util
-from . import isAdmin
+from . import Admin
 
 
 def printUsers(users):
 
     for user in users:
         admin = "Standard Account"
-        if isAdmin.userIsAdmin(user):
+        if Admin.userIsAdmin(user):
             admin = "Administrator Account"
         print(" - " + user + " : " + admin)
 
