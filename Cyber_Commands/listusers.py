@@ -1,14 +1,14 @@
 from . import util
-from . import Admin
+from . import admin
 
 
 def printUsers(users):
 
     for user in users:
-        admin = "Standard Account"
-        if Admin.userIsAdmin(user):
-            admin = "Administrator Account"
-        print(" - " + user + " : " + admin)
+        adminStatus = "Standard Account"
+        if admin.userIsAdmin(user):
+            adminStatus = "Administrator Account"
+        print(" - " + user + " : " + adminStatus)
 
 
 def getusers():

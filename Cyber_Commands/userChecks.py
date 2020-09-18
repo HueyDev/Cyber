@@ -1,6 +1,6 @@
 from . import util
 from . import listusers
-from . import Admin
+from . import admin
 
 
 def checkAdmins(args):
@@ -23,7 +23,7 @@ def checkAdmins(args):
     
     for user in users:
 
-        admin = Admin.userIsAdmin(user)
+        admin = admin.userIsAdmin(user)
 
         if admin and user in args:
             #print(user + " is already an adminastrator")
@@ -70,7 +70,4 @@ def checkUsers(args):
                 util.deleteUser(user)
         else:
             pass
-
-
-
 

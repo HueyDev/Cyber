@@ -7,16 +7,16 @@ import sys
 
 
 # Command imports
-from Cyber_Commands import listusers, Admin, checkAdmins, firewall
+from Cyber_Commands import listusers, admin, userChecks, firewall
 
 
 # Global Variables
 commands = {
     "--listusers" : listusers.listusers,
     "--listallusers" : listusers.listallusers,
-    "--isadmin" : Admin.isAdmin,
-    "--checkadmins" : checkAdmins.checkAdmins,
-    "--checkusers" : checkAdmins.checkUsers,
+    "--isadmin" : admin.isAdmin,
+    "--checkadmins" : userChecks.checkAdmins,
+    "--checkusers" : userChecks.checkUsers,
     "--openfirewall" : firewall.openFirewallSettings,
     "--turnonfirewall" : firewall.turnonfirewall
 }
