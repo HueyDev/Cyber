@@ -15,7 +15,8 @@ commands = {
     "--listusers" : listusers.listusers,
     "--listallusers" : listusers.listallusers,
     "--isadmin" : isAdmin.isAdmin,
-    "--checkadmins" : checkAdmins.checkAdmins
+    "--checkadmins" : checkAdmins.checkAdmins,
+    "--checkusers" : checkAdmins.checkUsers
 }
 
 

@@ -1,5 +1,6 @@
 import subprocess
 import os
+import sys
 
 
 def runCommand(command, simple=False, returncode=False):
@@ -29,14 +30,45 @@ def makeUserAdmin(user):
     _, s = runCommand("sudo adduser " + user + " sudo", returncode=True)
     if s == 1:
         print("ERROR: Was unable to promote " + user + " to admin")
+        return False
     else:
         print(user + " promoted to admin")
+        return True
 
 def demoteUser(user):
     _, s = runCommand("sudo deluser " + user + " sudo", returncode=True)
 
     if s == 1:
         print("ERROR: Was unable to demote " + user)
+        return False
     else:
         print(user + " was demoted to standard user")
+        return True
+
+
+def confirmAction(message="Please confirm(y/n)"):
+    while True:
+        i = input(message)
+        if i.lower() == "n":
+            return False
+        elif i.lower() == "y":
+            return True
+        else:
+            print("Invalid input")
+
+
+def deleteUser(user):
+    print("Deleting " + user)
+    _, r = runCommand("sudo deluser " + user, returncode=True)
+    runCommand("sudo rm -r /home/" + user, simple=True)
+
+    if r == 1:
+        print("ERROR: Unable to delete " + user)
+        return False
+    else:
+        print(user + " deleted")
+        return True
+
+def addUser(user):
+    runCommand("sudo adduser --quiet " + user, simple=True)
 
