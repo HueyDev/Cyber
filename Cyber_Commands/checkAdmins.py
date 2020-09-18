@@ -8,6 +8,18 @@ def checkAdmins(args):
     if not type(args) == list:
         print("ERROR: checkAdmins was passed non list variable")
         return
+
+    if len(args) < 1:
+        print("Warning you have selected no users as admins. Should you continue you could be permenatly locked out of admin rights redering the os useless")
+        r = input("Do you wish to continue(y/n) ")
+        if r.lower() == "n":
+            return
+        elif r.lower() == "y":
+            print("Continuing...")
+            pass
+        else:
+            print("unknown symbol exiting...")
+            return
     
     users = listusers.getusers()
     
