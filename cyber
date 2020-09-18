@@ -1,3 +1,15 @@
 #!/bin/python3
 
-print("AAAH")
+# Global Imports
+import os
+import sys
+
+# Collect and sort arguments
+
+args = sys.argv
+command = args[1]
+
+args.remove(args[0])
+args.remove(command)
+
+print(args)
