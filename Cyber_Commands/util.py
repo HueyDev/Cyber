@@ -2,7 +2,7 @@ import subprocess
 import os
 
 
-def runCommand(command, simple=False):
+def runCommand(command, simple=False, returncode=False):
 
     if not type(command) == str:
         print("ERROR: run command passed non string type")
@@ -15,9 +15,10 @@ def runCommand(command, simple=False):
     command = command.split(" ")
 
     process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
-    stdout, stderr = process.communicate()
+    stdout = process.communicate()[0]
+    rc = process.returncode
 
-    if stdout:
-        return stdout
+    if returncode:
+        return (stdout, rc)
     else:
-        return stderr
+        return stdout

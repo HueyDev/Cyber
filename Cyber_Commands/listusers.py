@@ -1,4 +1,14 @@
 from . import util
+from . import isAdmin
+
+
+def printUsers(users):
+
+    for user in users:
+        admin = "Standard Account"
+        if isAdmin.userIsAdmin(user):
+            admin = "Administrator Account"
+        print(" - " + user + " : " + admin)
 
 
 def listusers(args):
@@ -15,8 +25,10 @@ def listusers(args):
     users = users.strip()
     users = users.split("\n")
     for u in users:
-        util.runCommand("id -u " + u, simple=True)
-        result = util.runCommand("echo $?", simple=False)
-        if result == "1":
+        _ , returncode = util.runCommand("id -u " + u, simple=False, returncode=True)
+
+        if returncode == 1:
             users.remove(u)
-    print(users)
+
+    printUsers(users)
+        
