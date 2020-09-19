@@ -72,3 +72,25 @@ def deleteUser(user):
 def addUser(user):
     runCommand("sudo adduser --quiet " + user, simple=True)
 
+
+def getWord(string, loc=1):
+    string.replace('\t', ' ')
+    string = string.split(" ")
+    return string[loc-1]
+
+
+def runAsAdmin():
+    if os.getuid() == 0:
+        return True
+    else:
+        return False
+
+# File management
+
+def getLinesFromFile(filePath):
+    result = runCommand("sudo cat " + filePath)
+    result = result.split("\n")
+    return result
+
+def appendToFile(filePath, data):
+    runCommand("sudo echo " + data + " >> " + filePath, simple=True)
