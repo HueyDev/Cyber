@@ -1,6 +1,7 @@
 from . import util
 from . import listusers
 from . import admin
+from . import todolist
 
 
 def checkAdmins(args):
@@ -42,7 +43,11 @@ def checkAdmins(args):
             print(user + " is being demoted to standard user")
             util.demoteUser(user) 
 
+    todolist.modifyItem("check admin", True)
+
+
 def checkUsers(args):
+
     if not type(args) == list:
         print("ERROR: checkUsers was passed nonlist variable")
         return
@@ -71,3 +76,4 @@ def checkUsers(args):
         else:
             pass
 
+    todolist.modifyItem("illegal users", True)

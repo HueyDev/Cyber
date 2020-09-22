@@ -15,7 +15,7 @@ commands = {
     "--listusers" : listusers.listusers,
     "--listallusers" : listusers.listallusers,
     "--isadmin" : admin.isAdmin,
-    "--checkadmins" : userChecks.checkAdmins,
+    "--checkadmin" : userChecks.checkAdmins,
     "--checkusers" : userChecks.checkUsers,
     "--openfirewall" : firewall.openFirewallSettings,
     "--turnonfirewall" : firewall.turnonfirewall,
