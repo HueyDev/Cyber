@@ -7,7 +7,7 @@ import sys
 
 
 # Command imports
-from Cyber_Commands import listusers, admin, userChecks, firewall, todolist
+from Cyber_Commands import listusers, admin, userChecks, firewall, todolist, fileScans
 
 
 # Global Variables
@@ -21,7 +21,8 @@ commands = {
     "--turnonfirewall" : firewall.turnonfirewall,
     "--todolist" : todolist.printList,
     "--inittodolist" : todolist.initList,
-    "--settodoitem" : todolist.manualOveride
+    "--settodoitem" : todolist.manualOveride,
+    "--scanForPassword" : fileScans.passwordScan
 }
 
 

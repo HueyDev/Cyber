@@ -94,3 +94,19 @@ def getLinesFromFile(filePath):
 
 def appendToFile(filePath, data):
     runCommand("sudo echo " + data + " >> " + filePath, simple=True)
+
+
+def scanForFileOfName(t, startDir="/home"):
+    files = runCommand("sudo find " + startDir + " -name " + t)
+
+    files = files.strip()
+
+    files = files.split("\n")
+
+    print()
+
+    for f in files:
+        print("File found " + f)
+        if confirmAction("Delete " + f.split("/")[-1] + "?(y/n)"):
+            runCommand("sudo rm -r " + f)
+        print()

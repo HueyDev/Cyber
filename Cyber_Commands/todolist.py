@@ -13,7 +13,7 @@ class Item:
 
 checklist = [
     Item("Update password policies", ["update policies"], 0), # Unimplemented
-    Item("Scan for password files"), ["scan for password"], 1), # Unimplemented
+    Item("Scan for password files", ["scan for password"], 1), # Unimplemented
     Item("Check for illegal users", ["illegal users", "check for illegal users"], 2),
     Item("Check admin", ["check admin"], 3),
     Item("Disable guest account", ["disable guest"], 4), # Unimplemented
