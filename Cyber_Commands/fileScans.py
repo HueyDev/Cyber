@@ -1,4 +1,5 @@
 from . import util
+from . import todolist
 import os
 
 
@@ -17,6 +18,8 @@ def passwordScan(args):
         startDirectory = args[0]
     
     util.scanForFileOfName("*password*")
+
+    todolist.modifyItem("scan for password", True)
 
 
 def programScan(args):
