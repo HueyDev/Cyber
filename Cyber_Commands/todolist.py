@@ -12,7 +12,19 @@ class Item:
         self.loc = loc
 
 checklist = [
-    Item("Check for illegal users", ["illegal users", "check for illegal users"], 0)
+    Item("Update password policies", ["update policies"], 0), # Unimplemented
+    Item("Scan for password files"), ["scan for password"], 1), # Unimplemented
+    Item("Check for illegal users", ["illegal users", "check for illegal users"], 2),
+    Item("Check admin", ["check admin"], 3), # Not connected
+    Item("Disable guest account", ["disable guest"], 4), # Unimplemented
+    Item("Disable root account", ["disable root"], 5), # Unimplemented
+    Item("Reset user passwords", ["reset passwords"], 6), # Unimplemented
+    Item("Scan for media files", ["scan media"], 7), # Unimplemented
+    Item("Scan programs", ["scan programs"], 8), # Unimplemented
+    Item("Turn on firewall", ["turn on firewall"], 9), # Not connected
+    Item("Reject incoming request", ["reject incoming"], 10), # Unimplemented
+    Item("Turn on daily updates", ["daily updates"], 11), # Unimplemented
+    Item("Enable firefox privacy settings", ["enable firefox privacy"], 12) # Manual check required
 ]
 
 def isInit():
@@ -30,8 +42,8 @@ def initList(args):
 
 def printList(args):
     if not isInit():
-        print("TODO list not initilized.\nRun \"cyber --initlist \" to initilize")
-        return
+        print("Initializing TODO LIST")
+        initList()
     
     for item in checklist:
         if item.status:
