@@ -72,9 +72,7 @@ def manualOveride(args):
 
 def modifyItem(item, status):
 
-    if not util.runAsAdmin():
-        print("ERROR: This command must be run as admin")
-        return
+    
 
     item = getItem(item)
     if not item:

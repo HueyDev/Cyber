@@ -33,6 +33,10 @@ command = args[1]
 args.remove(args[0])
 args.remove(command)
 
+if not util.runAsAdmin():
+    print("ERROR: This command must be run as admin")
+    return
+
 for key in commands:
     if command == key:
         commands[key](args)
