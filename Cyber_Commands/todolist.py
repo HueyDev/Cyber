@@ -1,4 +1,5 @@
 from . import util
+from . import managePassword
 
 DATA_FILE_PATH = "/etc/cyber_todo_list.txt"
 
@@ -16,7 +17,7 @@ checklist = [
     Item("Scan for password files", ["scan for password"], 1),
     Item("Check for illegal users", ["illegal users", "check for illegal users"], 2),
     Item("Check admin", ["check admin"], 3),
-    Item("Disable guest account", ["disable guest"], 4), # Unimplemented
+    Item("Disable guest account", ["disable guest"], 4),
     Item("Disable root account", ["disable root"], 5), # Unimplemented
     Item("Reset user passwords", ["reset passwords"], 6), # Unimplemented
     Item("Scan for media files", ["scan media"], 7), # Unimplemented
@@ -128,6 +129,10 @@ def updateList():
             continue
 
         getItem(itemId).status = status
+
+    if not managePassword.checkIfLightdm():
+        modifyItem("disable guest", True)
+
 
 
 # To be run on load
