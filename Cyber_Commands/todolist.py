@@ -20,8 +20,8 @@ checklist = [
     Item("Disable guest account", ["disable guest"], 4),
     Item("Disable root account", ["disable root"], 5), # Unimplemented
     Item("Reset user passwords", ["reset passwords"], 6),
-    Item("Scan for media files", ["scan media"], 7), # Unimplemented
-    Item("Scan programs", ["scan programs"], 8), # Unimplemented
+    Item("Scan for media files", ["scan media"], 7),
+    Item("Scan programs", ["scan programs"], 8),
     Item("Turn on firewall", ["turn on firewall"], 9),
     Item("Reject incoming request", ["reject incoming"], 10),
     Item("Turn on daily updates", ["daily updates"], 11), # Unimplemented
