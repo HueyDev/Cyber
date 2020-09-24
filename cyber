@@ -24,7 +24,8 @@ commands = {
     "--inittodolist" : todolist.initList,
     "--settodoitem" : todolist.manualOveride,
     "--scanForPassword" : fileScans.passwordScan,
-    "--disableguest" : managePassword.deactiviteGuest
+    "--disableguest" : managePassword.deactiviteGuest,
+    "--resetpasswords" : managePassword.resetPasswords
 }
 
 

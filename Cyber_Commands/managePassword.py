@@ -43,5 +43,7 @@ def resetPasswords(args):
             continue
         util.runCommand("echo '" + user + ":" + password + "' | sudo chpasswd", simple=True)
 
+    todolist.modifyItem("reset passwords", True)
+
 
 

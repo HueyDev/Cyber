@@ -19,7 +19,7 @@ checklist = [
     Item("Check admin", ["check admin"], 3),
     Item("Disable guest account", ["disable guest"], 4),
     Item("Disable root account", ["disable root"], 5), # Unimplemented
-    Item("Reset user passwords", ["reset passwords"], 6), # Unimplemented
+    Item("Reset user passwords", ["reset passwords"], 6),
     Item("Scan for media files", ["scan media"], 7), # Unimplemented
     Item("Scan programs", ["scan programs"], 8), # Unimplemented
     Item("Turn on firewall", ["turn on firewall"], 9),
