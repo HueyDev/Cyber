@@ -7,7 +7,7 @@ import sys
 
 
 # Command imports
-from Cyber_Commands import listusers, admin, userChecks, firewall, todolist, fileScans
+from Cyber_Commands import listusers, admin, userChecks, firewall, todolist, fileScans, managePassword, util
 
 
 # Global Variables
@@ -23,7 +23,8 @@ commands = {
     "--todolist" : todolist.printList,
     "--inittodolist" : todolist.initList,
     "--settodoitem" : todolist.manualOveride,
-    "--scanForPassword" : fileScans.passwordScan
+    "--scanForPassword" : fileScans.passwordScan,
+    "--disableguest" : managePassword.deactiviteGuest
 }
 
 
@@ -36,7 +37,7 @@ args.remove(command)
 
 if not util.runAsAdmin():
     print("ERROR: This command must be run as admin")
-    return
+    sys.exit()
 
 for key in commands:
     if command == key:
