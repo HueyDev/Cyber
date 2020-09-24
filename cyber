@@ -25,7 +25,8 @@ commands = {
     "--settodoitem" : todolist.manualOveride,
     "--scanForPassword" : fileScans.passwordScan,
     "--disableguest" : managePassword.deactiviteGuest,
-    "--resetpasswords" : managePassword.resetPasswords
+    "--resetpasswords" : managePassword.resetPasswords,
+    "--scanmedia" : fileScans.mediaScan
 }
 
 
