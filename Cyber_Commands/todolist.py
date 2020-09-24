@@ -22,8 +22,8 @@ checklist = [
     Item("Reset user passwords", ["reset passwords"], 6), # Unimplemented
     Item("Scan for media files", ["scan media"], 7), # Unimplemented
     Item("Scan programs", ["scan programs"], 8), # Unimplemented
-    Item("Turn on firewall", ["turn on firewall"], 9), # Not connected
-    Item("Reject incoming request", ["reject incoming"], 10), # Unimplemented
+    Item("Turn on firewall", ["turn on firewall"], 9),
+    Item("Reject incoming request", ["reject incoming"], 10),
     Item("Turn on daily updates", ["daily updates"], 11), # Unimplemented
     Item("Enable firefox privacy settings", ["enable firefox privacy"], 12) # Manual check required
 ]

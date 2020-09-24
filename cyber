@@ -19,6 +19,7 @@ commands = {
     "--checkusers" : userChecks.checkUsers,
     "--openfirewall" : firewall.openFirewallSettings,
     "--turnonfirewall" : firewall.turnonfirewall,
+    "--rejectincoming" : firewall.rejectIncoming,
     "--todolist" : todolist.printList,
     "--inittodolist" : todolist.initList,
     "--settodoitem" : todolist.manualOveride,
