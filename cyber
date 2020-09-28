@@ -7,7 +7,7 @@ import sys
 
 
 # Command imports
-from Cyber_Commands import listusers, admin, userChecks, firewall, todolist, fileScans, managePassword, util
+from Cyber_Commands import listusers, admin, userChecks, firewall, todolist, fileScans, managePassword, util, miscellaneous
 
 
 # Global Variables
@@ -46,4 +46,7 @@ if not util.runAsAdmin():
 for key in commands:
     if command == key:
         commands[key](args)
-        break
+        sys.exit()
+
+print("Unable to find command " + command)
+
