@@ -13,19 +13,20 @@ class Item:
         self.loc = loc
 
 checklist = [
-    Item("Update password policies", ["update policies"], 0),
-    Item("Scan for password files", ["scan for password"], 1),
-    Item("Check for illegal users", ["illegal users", "check for illegal users"], 2),
-    Item("Check admin", ["check admin"], 3),
-    Item("Disable guest account", ["disable guest"], 4),
-    Item("Disable root account", ["disable root"], 5), # Unimplemented
-    Item("Reset user passwords", ["reset passwords"], 6),
-    Item("Scan for media files", ["scan media"], 7),
-    Item("Scan programs", ["scan programs"], 8),
-    Item("Turn on firewall", ["turn on firewall"], 9),
-    Item("Reject incoming request", ["reject incoming"], 10),
-    Item("Turn on daily updates", ["daily updates"], 11),
-    Item("Enable firefox privacy settings", ["enable firefox privacy"], 12) # Manual check required
+    Item("Update password policies        : --setpasswordpolicies", ["update policies"], 0),
+    Item("Scan for password files         : --scanforpassword", ["scan for password"], 1),
+    Item("Check for illegal users         : --checkusers", ["illegal users", "check for illegal users"], 2),
+    Item("Check admin                     : --checkadmin", ["check admin"], 3),
+    Item("Disable guest account           : --disableguest", ["disable guest"], 4),
+    Item("Disable root account            : manual (--settodoitem 5)", ["disable root"], 5), # Unimplemented
+    Item("Reset user passwords            : --resetpasswords", ["reset passwords"], 6),
+    Item("Scan for media files            : --scanmedia", ["scan media"], 7),
+    Item("Scan programs                   : --scanprograms", ["scan programs"], 8),
+    Item("Turn on firewall                : --turnonfirewall", ["turn on firewall"], 9),
+    Item("Reject incoming request         : --rejectincoming", ["reject incoming"], 10),
+    Item("Turn on daily updates           : --setautoupdates", ["daily updates"], 11),
+    Item("Enable firefox privacy settings : manual (--settodoitem 12)", ["enable firefox privacy"], 12), # Manual check required
+    Item("Scan for password files         : --scanforpassword", ["scan for password", 13])
 ]
 
 def isInit():

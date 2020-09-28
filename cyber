@@ -23,12 +23,13 @@ commands = {
     "--todolist" : todolist.printList,
     "--inittodolist" : todolist.initList,
     "--settodoitem" : todolist.manualOveride,
-    "--scanForPassword" : fileScans.passwordScan,
+    "--scanforpassword" : fileScans.passwordScan,
     "--disableguest" : managePassword.deactiviteGuest,
     "--resetpasswords" : managePassword.resetPasswords,
     "--scanmedia" : fileScans.mediaScan,
-    "--programscan" : fileScans.programScan,
-    "--setpasswordpolicies" : managePassword.setPasswordPolicies
+    "--scanprograms" : fileScans.programScan,
+    "--setpasswordpolicies" : managePassword.setPasswordPolicies,
+    "--setautoupdates" : miscellaneous.autoUpdate
 }
 
 
