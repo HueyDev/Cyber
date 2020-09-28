@@ -28,10 +28,10 @@ def resetPasswords(args):
 
     if len(args) > 0:
         skipUser = args[0]
-    
+
     if len(args) > 1:
         password = args[1]
-    
+
     if len(args) > 2:
         print("ERROR: reset passwords passed to many arguments")
         return
