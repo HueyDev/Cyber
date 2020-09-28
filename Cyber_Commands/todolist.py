@@ -45,7 +45,7 @@ def initList(args):
 def printList(args):
     if not isInit():
         print("Initializing TODO LIST")
-        initList()
+        initList("Arg")
     
     for item in checklist:
         if item.status:
