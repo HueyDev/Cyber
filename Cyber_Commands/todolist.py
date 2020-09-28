@@ -95,7 +95,6 @@ def getItem(item):
 
         return i
     except:
-        print("ERROR: NEUTRAL")
         pass
 
     for i in checklist:
