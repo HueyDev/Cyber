@@ -42,7 +42,7 @@ def resetPasswords(args):
         if user == skipUser:
             continue
         util.runCommand("echo " + user + ":" + password + " | sudo chpasswd", simple=True)
-        util.runCommand("echo " + user + ":" + password + ", simple=True)
+        util.runCommand("echo " + user + ":" + password, simple=True)
 
     todolist.modifyItem("reset passwords", True)
 
