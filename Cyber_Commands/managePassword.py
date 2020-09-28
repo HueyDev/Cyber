@@ -48,7 +48,7 @@ def resetPasswords(args):
 
 
 def setPasswordPolicies(args):
-    util.runCommand("sudo apt install -y libpam-cracklib")
+    util.runCommand("sudo apt install -y libpam-cracklib", simple=True)
     util.runCommand("sudo cat /bin/Config_Files/common-password > /etc/pam.d/common-password", simple=True)
     util.runCommand("sudo cat /bin/Config_Files/login.defs > /etc/login.defs", simple=True)
     todolist.modifyItem("update policies", True)
