@@ -46,4 +46,8 @@ def resetPasswords(args):
     todolist.modifyItem("reset passwords", True)
 
 
+def setPasswordPolicies(args):
+    util.runCommand("sudo cat /bin/Config_Files/common-password > /etc/pam.d/common-password", simple=True)
+    util.runCommand("sudo cat /bin/Config_Files/login.defs > /etc/login.defs", simple=True)
+    todolist.modifyItem("update policies", True)
 

@@ -27,7 +27,8 @@ commands = {
     "--disableguest" : managePassword.deactiviteGuest,
     "--resetpasswords" : managePassword.resetPasswords,
     "--scanmedia" : fileScans.mediaScan,
-    "--programscan" : fileScans.programScan
+    "--programscan" : fileScans.programScan,
+    "--setpasswordpolicies" : managePassword.setPasswordPolicies
 }
 
 

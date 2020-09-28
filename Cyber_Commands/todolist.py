@@ -13,7 +13,7 @@ class Item:
         self.loc = loc
 
 checklist = [
-    Item("Update password policies", ["update policies"], 0), # Unimplemented
+    Item("Update password policies", ["update policies"], 0),
     Item("Scan for password files", ["scan for password"], 1),
     Item("Check for illegal users", ["illegal users", "check for illegal users"], 2),
     Item("Check admin", ["check admin"], 3),
