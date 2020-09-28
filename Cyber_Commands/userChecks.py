@@ -24,22 +24,22 @@ def checkAdmins(args):
     
     for user in users:
 
-        admin = admin.userIsAdmin(user)
+        isAdmin = admin.userIsAdmin(user)
 
-        if admin and user in args:
+        if isAdmin and user in args:
             #print(user + " is already an adminastrator")
             continue
 
-        if not admin and not user in args:
+        if not isAdmin and not user in args:
             #print(user + " is already a standard user")
             continue
 
-        if not admin and user in args:
+        if not isAdmin and user in args:
             print(user + " is being promoted to administrator")
             util.makeUserAdmin(user)
             continue
 
-        if admin and not user in args:
+        if isAdmin and not user in args:
             print(user + " is being demoted to standard user")
             util.demoteUser(user) 
 
