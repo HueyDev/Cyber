@@ -26,7 +26,7 @@ checklist = [
     Item("Reject incoming request         : --rejectincoming", ["reject incoming"], 10),
     Item("Turn on daily updates           : --setautoupdates", ["daily updates"], 11),
     Item("Enable firefox privacy settings : manual (--settodoitem 12)", ["enable firefox privacy"], 12), # Manual check required
-    Item("Scan for password files         : --scanforpassword", ["scan for password", 13])
+    Item("Scan for password files         : --scanforpassword", ["scan for password"], 13)
 ]
 
 def isInit():
